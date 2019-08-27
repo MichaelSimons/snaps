@@ -1,4 +1,4 @@
-name: dotnetapp
+name: scd-app
 version: '0.1'
 summary: .NET Bot
 description: This is a sample .NET Core 2.1 application.
@@ -18,4 +18,4 @@ parts:
     source-type: local
     override-stage: |
       cd $SNAPCRAFT_PART_INSTALL
-      chmod +x dotnetapp
+      chmod +x scd-app
