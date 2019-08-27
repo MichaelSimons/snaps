@@ -1,0 +1,12 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+
+# Visual Studio Code cache/options directory
+.vscode/
+.vs
+
+# Visual Studio user-specific files
+**/launchSettings.json
+**/*.user

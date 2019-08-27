@@ -8,30 +8,13 @@ confinement: strict
 apps:
   dotnetapp:
     command: dotnetapp
-
-base: core
+    plugs:
+      - dotnet-runtime
 
 parts:
   dotnetapp:
     plugin: dump
     source: out/
-    source-type: local
-    override-stage: |
-      cd $SNAPCRAFT_PART_INSTALL
-      chmod +x dotnetapp
-      snapcraftctl stage
-    stage-packages:
-        - libicu55
-        - libssl1.0.0
-        - libc6
-        - libcurl3
-        - libgssapi-krb5-2
-        - liblttng-ust0
-        - libstdc++6
-        - zlib1g
-        - libgcc1
-        - lldb
-        - libunwind8
   # dotnetapp:
   #   plugin: dotnet
   #   dotnet-runtime-version: 2.1.12
