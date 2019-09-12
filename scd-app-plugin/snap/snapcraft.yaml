@@ -9,11 +9,11 @@ apps:
   dotnetapp:
     command: dotnet fdd-app.dll
 
-base: core
+base: core18
 
 apps:
   dotnet-hello:
-    command: dotnet-hello
+    command: scd-app-plugin
 
 parts:
   dotnet-hello:
@@ -23,5 +23,5 @@ parts:
     override-build: |
       dotnet build -c Release
       dotnet publish -c Release -o $SNAPCRAFT_PART_INSTALL --self-contained -r linux-x64
-      chmod 0755 $SNAPCRAFT_PART_INSTALL/dotnet-hello
+      chmod 0755 $SNAPCRAFT_PART_INSTALL/scd-app-plugin
 

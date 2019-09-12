@@ -9,7 +9,7 @@ apps:
   dotnetapp:
     command: dotnet fdd-app.dll
 
-base: core
+base: core18
 
 parts:
   # Copied from core-setup
