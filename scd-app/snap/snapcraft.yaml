@@ -16,20 +16,15 @@ parts:
     plugin: dump
     source: out/
     source-type: local
-    # override-stage: |
-    #   cd $SNAPCRAFT_PART_INSTALL
-    #   chmod +x scd-app
+    override-stage: |
+      cd $SNAPCRAFT_PART_INSTALL
+      chmod +x scd-app
     stage-packages:
       - libicu60
       - libssl1.0.0
-      - libcurl3
       - libgssapi-krb5-2
       - liblttng-ust0
       - libstdc++6
       - zlib1g
       - libgcc1
-      - lldb
-      - libunwind8
-      - libtinfo5
-      - libdb5.3
       - libc6
