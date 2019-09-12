@@ -1,4 +1,4 @@
-name: dotnetapp
+name: fdd-app
 version: '0.1'
 summary: .NET Bot
 description: This is a sample .NET Core 2.1 application.
@@ -6,7 +6,7 @@ grade: devel
 confinement: strict
 
 apps:
-  dotnetapp:
+  fdd-app:
     command: dotnet fdd-app.dll
 
 base: core18
@@ -32,7 +32,7 @@ parts:
       - libdb5.3
       - libc6
 
-  dotnetapp:
+  fdd-app:
     plugin: dump
     source: out/
     source-type: local
