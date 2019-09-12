@@ -7,34 +7,33 @@ confinement: strict
 
 apps:
   dotnetapp:
-    command: dotnetapp
+    command: dotnet fdd-app.dll
 
 base: core
 
 parts:
+  # Copied from core-setup
+  dotnet-runtime:
+    plugin: dump
+    source: https://download.visualstudio.microsoft.com/download/pr/9f21e352-9d2c-4e3b-af45-915da89158db/0e8a7ea83cc08d4bcf417a927a36ed6f/dotnet-runtime-2.2.6-linux-x64.tar.gz
+    source-checksum: sha512/8af7a39407b4a3503a7c6d83106336140eeef2bc24decf1b817c7d5a3e5596c8cefed8f211019148cd89a31759d851836dd6147e544b8c1d183dcfbd5a8d4636
+    stage-packages:
+      - libicu60
+      - libssl1.0.0
+      - libcurl3
+      - libgssapi-krb5-2
+      - liblttng-ust0
+      - libstdc++6
+      - zlib1g
+      - libgcc1
+      - lldb
+      - libunwind8
+      - libtinfo5
+      - libdb5.3
+      - libc6
+
   dotnetapp:
     plugin: dump
     source: out/
     source-type: local
-    override-stage: |
-      cd $SNAPCRAFT_PART_INSTALL
-      chmod +x dotnetapp
-      snapcraftctl stage
-    stage-packages:
-        - libicu55
-        - libssl1.0.0
-        - libc6
-        - libcurl3
-        - libgssapi-krb5-2
-        - liblttng-ust0
-        - libstdc++6
-        - zlib1g
-        - libgcc1
-        - lldb
-        - libunwind8
-  # dotnetapp:
-  #   plugin: dotnet
-  #   dotnet-runtime-version: 2.1.12
-  #   source: .
-  #   override-build: |
-  #     dotnet publish -c Release -o $SNAPCRAFT_PART_INSTALL
+

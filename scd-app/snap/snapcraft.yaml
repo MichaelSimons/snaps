@@ -16,10 +16,8 @@ parts:
     plugin: dump
     source: out/
     source-type: local
-    # override-stage: |
-    #   cd $SNAPCRAFT_PART_INSTALL
-    #   chmod +x scd-app
     stage-packages:
+      # The following are the `runtime-deps` dependencies.
       - libicu60
       - libssl1.0.0
       - libgssapi-krb5-2
@@ -28,6 +26,7 @@ parts:
       - zlib1g
       - libgcc1
       - libc6
+      # The following are listed as missing libraries when only including the above.
       - libasn1-8-heimdal
       - libcurl4
       - libgssapi3-heimdal
