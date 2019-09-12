@@ -9,7 +9,7 @@ apps:
   fdd-app:
     command: >
       dotnet
-      fdd-app.dll
+      $SNAP/fdd-app.dll
 
   test:
     command: dotnet
