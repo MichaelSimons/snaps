@@ -1,4 +1,4 @@
-name: dotnetapp
+name: scd-app-plugin
 version: '0.1'
 summary: .NET Bot
 description: This is a sample .NET Core 2.1 application.
@@ -12,11 +12,11 @@ apps:
 base: core
 
 apps:
-  dotnet-hello:
+  scd-app-plugin:
     command: scd-app-plugin
 
 parts:
-  dotnet-hello:
+  scd-app-plugin:
     plugin: dotnet
     dotnet-runtime-version: 2.1.0
     source: .
