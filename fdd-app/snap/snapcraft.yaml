@@ -7,7 +7,9 @@ confinement: strict
 
 apps:
   fdd-app:
-    command: dotnet fdd-app.dll
+    command: >
+      dotnet
+      fdd-app.dll
 
 base: core18
 
