@@ -7,6 +7,7 @@ confinement: strict
 
 apps:
   fdd-app:
+    # not sure if this is the right way with the $snap usage?  Is there a way to set the "working directory"?
     command: >
       dotnet
       $SNAP/fdd-app.dll
