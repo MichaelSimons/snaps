@@ -14,7 +14,16 @@ apps:
 #       - dotnet-runtime-22
 
   test:
-    command: dotnet
+    command: $SNAP/base/dotnet
+    plugs:
+      - dotnet-runtime-22
+
+plugs:
+  base:
+    content: dotnet-runtime
+    interface: content
+    target: $SNAP/base
+    default-provider: dotnet-runtime-22
 
 base: core18
 
