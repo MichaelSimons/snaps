@@ -13,16 +13,13 @@ apps:
 #     plugs:
 #       - dotnet-runtime-22
 
-  test:
-    command: $SNAP/base/dotnet
-    plugs:
-      - dotnet-runtime-22
+  # test:
+  #   command: $SNAP/dotnet-runtime-22/dotnet $SNAP/fdd-app-interface.dll
 
 plugs:
-  base:
-    content: dotnet-runtime
+  dotnet-runtime-22:
     interface: content
-    target: $SNAP/base
+    target: $SNAP/dotnet-runtime-22
     default-provider: dotnet-runtime-22
 
 base: core18
