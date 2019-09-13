@@ -12,9 +12,6 @@ apps:
       dotnet
       $SNAP/fdd-app.dll
 
-  test:
-    command: dotnet
-
 base: core18
 
 parts:
