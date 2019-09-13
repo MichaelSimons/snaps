@@ -39,4 +39,3 @@ parts:
     plugin: dump
     source: out/
     source-type: local
-
