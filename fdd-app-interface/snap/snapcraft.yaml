@@ -6,6 +6,8 @@ grade: devel
 confinement: strict
 
 # apps:
+    # This doesn't work because the Muxer is outside of this snap.  You can't reference content outside of the app.
+    # May be possible to write a wrapper for this.
 #   fdd-app-interface:
 #     command: >
 #       dotnet
