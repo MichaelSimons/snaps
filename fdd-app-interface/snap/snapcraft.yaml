@@ -15,6 +15,7 @@ apps:
       $SNAP/fdd-app-interface.dll
 
 plugs:
+  # Mount the content shared from dotnet-runtime-22 into $SNAP/dotnet-runtime-22
   dotnet-runtime-22:
     interface: content
     target: $SNAP/dotnet-runtime-22
