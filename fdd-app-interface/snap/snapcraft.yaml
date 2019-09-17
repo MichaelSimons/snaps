@@ -5,18 +5,14 @@ description: This is a sample .NET Core 2.1 application.
 grade: devel
 confinement: strict
 
-# apps:
-    # This doesn't work because the Muxer is outside of this snap.  You can't reference content outside of the app.
-    # May be possible to write a wrapper for this.
-#   fdd-app-interface:
-#     command: >
-#       dotnet
-#       $SNAP/fdd-app-interface.dll
-#     plugs:
-#       - dotnet-runtime-22
-
-  # test:
-  #   command: $SNAP/dotnet-runtime-22/dotnet $SNAP/fdd-app-interface.dll
+apps:
+    # You can't reference the dotnet muxer directory because it is contained outside of the snap
+    # and snapcraft validates the existence of the command.
+  fdd-app-interface:
+    command: >
+      env
+      $SNAP/dotnet-runtime-22/dotnet
+      $SNAP/fdd-app-interface.dll
 
 plugs:
   dotnet-runtime-22:
