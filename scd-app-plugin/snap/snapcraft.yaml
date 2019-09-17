@@ -5,10 +5,6 @@ description: This is a sample .NET Core 2.1 application.
 grade: devel
 confinement: strict
 
-apps:
-  dotnetapp:
-    command: dotnet fdd-app.dll
-
 base: core
 
 apps:
