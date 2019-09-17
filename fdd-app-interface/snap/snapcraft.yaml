@@ -6,8 +6,8 @@ grade: devel
 confinement: strict
 
 apps:
-    # You can't reference the dotnet muxer directory because it is contained outside of the snap
-    # and snapcraft validates the existence of the command.
+  # You can't reference the dotnet muxer directory because it is contained outside of the snap
+  # and snapcraft validates the existence of the command.
   fdd-app-interface:
     command: >
       env
