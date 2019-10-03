@@ -9,6 +9,8 @@ confinement: strict
 apps:
   fdd-app-interface:
     command: fdd-app-interface
+    environment:
+      DOTNET_ROOT: $SNAP/dotnet-runtime-30
 
 plugs:
   # Mount the content shared from dotnet-runtime-30 into $SNAP/dotnet-runtime-30
