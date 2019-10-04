@@ -24,3 +24,6 @@ parts:
     plugin: dump
     source: out/
     source-type: local
+    stage-packages:
+      - libc6
+
